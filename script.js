@@ -21,10 +21,12 @@ document.body.innerHTML += `<p>Prvních 5 znaků: ${title.slice(0, 5)}</p>`;
 const pozicePoslednihoZnaku = title.length - 1;
 const pozicePatehoZnakuOdKonce = title.length - 5;
 
-document.body.innerHTML += `<p>Posledních 5 znaků: ${title.slice(
+document.body.innerHTML += `
+<p>Posledních 5 znaků: ${title.slice(
   pozicePatehoZnakuOdKonce,
   pozicePoslednihoZnaku + 1
-)}</p>`;
+)}</p>
+`;
 
 /*
 E-maily
@@ -53,7 +55,7 @@ const atIndex = email.indexOf("@");
 const userName = email.slice(0, atIndex);
 
 // 5.  Dále z e-mailu získejte název domény tedy například gmail.com.
-const domain = email.slice(atIndex + 1, email.length);
+const domain = email.slice(atIndex + 1); // pokud chceme výsek od určitého indexu až do konce, nemusíme zadávat druhý parametr
 
 /* 6. Ze získaných informací vytvořte objekt, který bude vypadat například takto:
 const parsedEmail = {
@@ -72,3 +74,32 @@ document.body.innerHTML += `
 <p>Uživatelské jméno: ${parsedEmail.userName}</p>
 <p>Doména: ${parsedEmail.domain}</p>
 `;
+
+/*
+Doručování
+Vytvořte webovou stránku, kde uživatel zadá svoji adresu například pro účely doručení objednaného zboží. Požaduje ulici, číslo domu, město a PSČ.
+*/
+
+document.body.innerHTML += `<h1>Cvičení: Doručování</h2>`;
+
+// 1. Uložte všechny údaje do vhodně pojmenovaných proměnných.
+const street = prompt("Ulice:");
+const streetNumber = prompt("Číslo popisné:");
+const city = prompt("Město:");
+const zipCode = prompt("PSČ:");
+
+/* 2. Ze zadaných údajů sestavte pomocí interpolace řetězeců obsahující HTML ve formátu jako níže
+<address>
+  <p>Pod Stájemi 67</p>
+  <p>12754 Klysnov</p>
+</address>
+Pomocí document.body.innerHTML vložte sestavené HTML do stránky.
+*/
+const address = `
+<address>
+  <p>${street} ${streetNumber}</p>
+  <p>${zipCode}  ${city}</p>
+</address>
+`;
+
+document.body.innerHTML += address;
