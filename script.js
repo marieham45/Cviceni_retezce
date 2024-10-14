@@ -3,7 +3,7 @@ Vlastnosti a metody
 V JavaScriptovém programu si založte proměnnou title a uložte do ní název svého oblíbeného filmu (např. Pán prstenů). Proveďte následující úkoly.
 */
 
-document.body.innerHTML += `<h1>Cvičení: Vlastnosti a metody</h2>`;
+document.body.innerHTML += `<h1>Cvičení: Vlastnosti a metody</h1>`;
 
 const title = "Karlík a továrna na čokoládu";
 
@@ -43,7 +43,7 @@ Postupujte dle následujících kroků.
 */
 
 // 1. Vytvořte jednoduchou webovou stránku s JavaScriptovým programem.
-document.body.innerHTML += `<h1>Cvičení: E-maily</h2>`;
+document.body.innerHTML += `<h1>Cvičení: E-maily</h1>`;
 
 // 2. Nechte uživatele zadat jeho e-mail a uložte si jej do proměnné email.
 const email = prompt("Zadejte e-mailovou adresu");
@@ -80,7 +80,7 @@ Doručování
 Vytvořte webovou stránku, kde uživatel zadá svoji adresu například pro účely doručení objednaného zboží. Požaduje ulici, číslo domu, město a PSČ.
 */
 
-document.body.innerHTML += `<h1>Cvičení: Doručování</h2>`;
+document.body.innerHTML += `<h1>Cvičení: Doručování</h1>`;
 
 // 1. Uložte všechny údaje do vhodně pojmenovaných proměnných.
 const street = prompt("Ulice:");
